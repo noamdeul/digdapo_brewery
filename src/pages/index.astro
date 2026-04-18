@@ -6,6 +6,7 @@ import { getCollection } from "astro:content";
 
 const allBeers = await getCollection("beers");
 const featuredBeers = allBeers.filter((b) => b.data.featured);
+const brewingNow = allBeers.filter((b) => b.data.status === "brewing");
 const base = import.meta.env.BASE_URL;
 ---
 
@@ -45,6 +46,36 @@ const base = import.meta.env.BASE_URL;
       </p>
     </div>
   </section>
+
+  <!-- Currently Brewing -->
+  {brewingNow.length > 0 && (
+    <section class="section brewing">
+      <div class="container">
+        <div class="brewing__header">
+          <span class="brewing__icon">&#9881;</span>
+          <h2>Currently Brewing</h2>
+        </div>
+        <p class="brewing__subtitle">What's in the fermenter right now.</p>
+        <div class="brewing__list">
+          {brewingNow.map((beer) => (
+            <a href={`${base}beers/${beer.data.slug}/`} class="brewing__card">
+              <div class="brewing__card-left">
+                <h3>{beer.data.title}</h3>
+                <span class="brewing__style">{beer.data.style}</span>
+              </div>
+              <div class="brewing__card-right">
+                <p class="brewing__desc">{beer.data.shortDescription}</p>
+                <div class="brewing__meta">
+                  <span class="badge badge--brewing">brewing</span>
+                  <span class="brewing__abv">{beer.data.abv != null ? `Target ${beer.data.abv}% ABV` : 'ABV TBD'}</span>
+                </div>
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
 
   <!-- Featured beers -->
   {featuredBeers.length > 0 && (
@@ -135,6 +166,95 @@ const base = import.meta.env.BASE_URL;
   .about__inner p {
     color: var(--color-cream-dim);
     margin-bottom: 1rem;
+  }
+
+  /* Currently Brewing */
+  .brewing__header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .brewing__icon {
+    font-size: 1.6rem;
+    animation: spin 4s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+
+  .brewing__subtitle {
+    color: var(--color-text-muted);
+    margin-top: 0.35rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .brewing__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .brewing__card {
+    display: flex;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: var(--color-surface);
+    border-left: 4px solid var(--color-coral);
+    border-radius: var(--radius);
+    text-decoration: none;
+    color: var(--color-text);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .brewing__card:hover {
+    transform: translateX(4px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .brewing__card-left {
+    flex-shrink: 0;
+    min-width: 140px;
+  }
+
+  .brewing__card-left h3 {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--color-cream);
+  }
+
+  .brewing__style {
+    font-size: 0.85rem;
+    color: var(--color-amber);
+    font-weight: 500;
+  }
+
+  .brewing__desc {
+    font-size: 0.9rem;
+    color: var(--color-cream-dim);
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+  }
+
+  .brewing__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .brewing__abv {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+  }
+
+  @media (max-width: 640px) {
+    .brewing__card {
+      flex-direction: column;
+      gap: 0.75rem;
+    }
   }
 
   @media (max-width: 768px) {

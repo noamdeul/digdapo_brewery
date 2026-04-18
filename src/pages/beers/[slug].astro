@@ -18,6 +18,7 @@ const base = import.meta.env.BASE_URL;
 const d = beer.data;
 
 const statusClass =
+  d.status === "brewing" ? "badge--brewing" :
   d.status === "on tap" ? "badge--gold" :
   d.status === "conditioning" ? "" :
   "badge--muted";
@@ -42,8 +43,9 @@ const statusClass =
         {d.logoImage && (
           <img
             src={`${base}${d.logoImage}`}
-            alt={`${d.title} label`}
+            alt={`${d.title} label — click to enlarge`}
             class="beer-detail__logo"
+            data-lightbox
           />
         )}
         <div>
@@ -56,10 +58,10 @@ const statusClass =
       <!-- Stats -->
       <div class="beer-detail__stats">
         <div class="stat">
-          <span class="stat__value">{d.abv}%</span>
+          <span class={`stat__value${d.abv == null ? ' stat__value--tbd' : ''}`}>{d.abv != null ? `${d.abv}%` : 'TBD'}</span>
           <span class="stat__label">ABV</span>
         </div>
-        {d.ibu && (
+        {d.ibu != null && (
           <div class="stat">
             <span class="stat__value">{d.ibu}</span>
             <span class="stat__label">IBU</span>
@@ -112,6 +114,12 @@ const statusClass =
       <a href={`${base}beers/`} class="beer-detail__back">&larr; All Beers</a>
     </div>
   </article>
+
+  <!-- Lightbox modal -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox__close" aria-label="Close">&times;</button>
+    <img class="lightbox__img" id="lightbox-img" alt="" />
+  </div>
 </BaseLayout>
 
 <style>
@@ -153,6 +161,13 @@ const statusClass =
     border-radius: var(--radius);
     object-fit: cover;
     border: 2px solid var(--color-surface);
+    cursor: zoom-in;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .beer-detail__logo:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
   }
 
   .beer-detail__style {
@@ -182,6 +197,11 @@ const statusClass =
     font-family: var(--font-heading);
     font-size: 1.3rem;
     color: var(--color-gold);
+  }
+
+  .stat__value--tbd {
+    color: var(--color-text-muted);
+    font-style: italic;
   }
 
   .stat__label {
@@ -271,6 +291,53 @@ const statusClass =
     font-weight: 600;
   }
 
+  /* Lightbox */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(8px);
+    place-items: center;
+    cursor: zoom-out;
+  }
+
+  .lightbox.open {
+    display: grid;
+  }
+
+  .lightbox__img {
+    max-width: min(90vw, 720px);
+    max-height: 85vh;
+    border-radius: var(--radius);
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+    animation: lightbox-in 0.25s ease-out;
+  }
+
+  @keyframes lightbox-in {
+    from { opacity: 0; transform: scale(0.92); }
+    to   { opacity: 1; transform: scale(1); }
+  }
+
+  .lightbox__close {
+    position: absolute;
+    top: 1.25rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--color-cream);
+    font-size: 2.5rem;
+    cursor: pointer;
+    line-height: 1;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+
+  .lightbox__close:hover {
+    opacity: 1;
+  }
+
   @media (max-width: 640px) {
     .beer-detail__stats {
       flex-wrap: wrap;
@@ -283,3 +350,34 @@ const statusClass =
     }
   }
 </style>
+
+<script>
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+
+  function openLightbox(src: string, alt: string) {
+    lightboxImg.src = src;
+    lightboxImg.alt = alt;
+    lightbox?.classList.add('open');
+    lightbox?.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    lightbox?.classList.remove('open');
+    lightbox?.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll<HTMLImageElement>('[data-lightbox]').forEach((img) => {
+    img.addEventListener('click', () => openLightbox(img.src, img.alt));
+  });
+
+  lightbox?.addEventListener('click', (e) => {
+    if (e.target !== lightboxImg) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeLightbox();
+  });
+</script>

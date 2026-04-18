@@ -3,7 +3,7 @@ interface Props {
   title: string;
   slug: string;
   style: string;
-  abv: number;
+  abv?: number;
   status: string;
   shortDescription: string;
   heroImage?: string;
@@ -13,6 +13,7 @@ const { title, slug, style, abv, status, shortDescription, heroImage } = Astro.p
 const base = import.meta.env.BASE_URL;
 
 const statusClass =
+  status === "brewing" ? "badge--brewing" :
   status === "on tap" ? "badge--gold" :
   status === "conditioning" ? "" :
   "badge--muted";
@@ -31,7 +32,7 @@ const statusClass =
   <div class="beer-card__body">
     <div class="beer-card__meta">
       <span class={`badge ${statusClass}`}>{status}</span>
-      <span class="beer-card__abv">{abv}% ABV</span>
+      <span class="beer-card__abv">{abv != null ? `${abv}% ABV` : 'ABV TBD'}</span>
     </div>
     <h3 class="beer-card__title">{title}</h3>
     <p class="beer-card__style">{style}</p>

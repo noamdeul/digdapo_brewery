@@ -90,6 +90,17 @@ h3 { font-size: clamp(1.2rem, 2.5vw, 1.5rem); }
   color: var(--color-cream);
 }
 
+.badge--brewing {
+  background: var(--color-coral);
+  color: var(--color-cream);
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
 .badge--gold {
   background: var(--color-amber);
   color: var(--color-bg);

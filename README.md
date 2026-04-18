@@ -24,7 +24,7 @@ style: "Pale Ale"
 batchDate: "2026-04-01"
 abv: 5.2
 ibu: 30
-status: "on tap"           # "on tap" | "conditioning" | "archived"
+status: "on tap"           # "brewing" | "on tap" | "conditioning" | "archived"
 shortDescription: "A short sentence about the beer."
 tastingNotes: "What it tastes like."
 ingredients:
