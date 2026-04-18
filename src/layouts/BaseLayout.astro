@@ -1,0 +1,57 @@
+---
+interface Props {
+  title: string;
+  description?: string;
+}
+
+const { title, description = "Digdapo Brewery — Craft beer brewed with passion since 2022" } = Astro.props;
+const base = import.meta.env.BASE_URL;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/png" href={`${base}images/brand/logo.png`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <title>{title} | Digdapo Brewery</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="container nav__inner">
+        <a href={`${base}`} class="nav__brand">
+          <img src={`${base}images/brand/logo.png`} alt="Digdapo Beer logo" />
+          Digdapo
+        </a>
+        <button class="nav__toggle" aria-label="Toggle menu">&#9776;</button>
+        <ul class="nav__links">
+          <li><a href={`${base}`}>Home</a></li>
+          <li><a href={`${base}beers/`}>Our Beers</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; {new Date().getFullYear()} Digdapo Brewery. Brewed with passion since 2022.</p>
+      </div>
+    </footer>
+
+    <script>
+      const toggle = document.querySelector('.nav__toggle');
+      const links = document.querySelector('.nav__links');
+      toggle?.addEventListener('click', () => links?.classList.toggle('open'));
+    </script>
+  </body>
+</html>

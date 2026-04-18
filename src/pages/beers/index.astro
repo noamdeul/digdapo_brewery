@@ -1,0 +1,47 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BeerCard from "../../components/BeerCard.astro";
+import "../../styles/global.css";
+import { getCollection } from "astro:content";
+
+const allBeers = await getCollection("beers");
+const sorted = allBeers.sort(
+  (a, b) => new Date(b.data.batchDate).getTime() - new Date(a.data.batchDate).getTime()
+);
+---
+
+<BaseLayout title="Our Beers">
+  <section class="section">
+    <div class="container">
+      <div class="page-header">
+        <h1>Our Beers</h1>
+        <p>Every batch tells a story. Here's our lineup so far.</p>
+      </div>
+      <div class="beer-grid">
+        {sorted.map((beer) => (
+          <BeerCard
+            title={beer.data.title}
+            slug={beer.data.slug}
+            style={beer.data.style}
+            abv={beer.data.abv}
+            status={beer.data.status}
+            shortDescription={beer.data.shortDescription}
+            heroImage={beer.data.heroImage}
+          />
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .page-header {
+    margin-bottom: 2rem;
+  }
+
+  .page-header p {
+    margin-top: 0.5rem;
+    color: var(--color-cream-dim);
+    font-size: 1.1rem;
+  }
+</style>

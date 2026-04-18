@@ -1,0 +1,150 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import BeerCard from "../components/BeerCard.astro";
+import "../styles/global.css";
+import { getCollection } from "astro:content";
+
+const allBeers = await getCollection("beers");
+const featuredBeers = allBeers.filter((b) => b.data.featured);
+const base = import.meta.env.BASE_URL;
+---
+
+<BaseLayout title="Home">
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero__inner">
+      <img
+        src={`${base}images/brand/logo.png`}
+        alt="Digdapo Beer logo"
+        class="hero__logo"
+      />
+      <div class="hero__text">
+        <h1>Digdapo <span class="hero__accent">Brewery</span></h1>
+        <p class="hero__tagline">
+          Craft beer brewed with passion, curiosity, and a giraffe's eye view
+          — since 2022.
+        </p>
+        <a href={`${base}beers/`} class="hero__cta">Explore Our Beers &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section about">
+    <div class="container about__inner">
+      <h2>Our Story</h2>
+      <p>
+        Digdapo started in a small home kitchen with a simple idea: brew the
+        kind of beer we wanted to drink. Each batch is an experiment — from
+        hop-forward IPAs to malty stouts, we chase flavours that surprise and
+        satisfy.
+      </p>
+      <p>
+        The name? Part inside joke, part manifesto. The giraffe stands tall,
+        sees far, and never settles for the ordinary. Neither do we.
+      </p>
+    </div>
+  </section>
+
+  <!-- Featured beers -->
+  {featuredBeers.length > 0 && (
+    <section class="section">
+      <div class="container">
+        <h2>Featured Brews</h2>
+        <div class="beer-grid" style="margin-top:1.5rem;">
+          {featuredBeers.map((beer) => (
+            <BeerCard
+              title={beer.data.title}
+              slug={beer.data.slug}
+              style={beer.data.style}
+              abv={beer.data.abv}
+              status={beer.data.status}
+              shortDescription={beer.data.shortDescription}
+              heroImage={beer.data.heroImage}
+            />
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+</BaseLayout>
+
+<style>
+  /* Hero */
+  .hero {
+    background:
+      linear-gradient(to bottom, var(--color-bg-alt), var(--color-bg));
+    padding-block: 4rem 5rem;
+  }
+
+  .hero__inner {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .hero__logo {
+    width: min(320px, 80vw);
+    border-radius: var(--radius);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  }
+
+  .hero__text {
+    max-width: 480px;
+    text-align: left;
+  }
+
+  .hero__accent {
+    color: var(--color-amber);
+  }
+
+  .hero__tagline {
+    margin-top: 1rem;
+    font-size: 1.15rem;
+    color: var(--color-cream-dim);
+    line-height: 1.6;
+  }
+
+  .hero__cta {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 0.75rem 1.5rem;
+    background: var(--color-rust);
+    color: var(--color-cream);
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s;
+  }
+
+  .hero__cta:hover {
+    background: var(--color-coral);
+    color: var(--color-cream);
+  }
+
+  /* About */
+  .about__inner {
+    max-width: 700px;
+  }
+
+  .about__inner h2 {
+    margin-bottom: 1rem;
+  }
+
+  .about__inner p {
+    color: var(--color-cream-dim);
+    margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero__inner {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .hero__text {
+      text-align: center;
+    }
+  }
+</style>

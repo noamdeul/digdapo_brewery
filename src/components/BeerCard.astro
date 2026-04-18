@@ -1,0 +1,121 @@
+---
+interface Props {
+  title: string;
+  slug: string;
+  style: string;
+  abv: number;
+  status: string;
+  shortDescription: string;
+  heroImage?: string;
+}
+
+const { title, slug, style, abv, status, shortDescription, heroImage } = Astro.props;
+const base = import.meta.env.BASE_URL;
+
+const statusClass =
+  status === "on tap" ? "badge--gold" :
+  status === "conditioning" ? "" :
+  "badge--muted";
+---
+
+<a href={`${base}beers/${slug}/`} class="beer-card">
+  <div class="beer-card__img">
+    {heroImage ? (
+      <img src={`${base}${heroImage}`} alt={title} />
+    ) : (
+      <div class="beer-card__placeholder">
+        <span>🍺</span>
+      </div>
+    )}
+  </div>
+  <div class="beer-card__body">
+    <div class="beer-card__meta">
+      <span class={`badge ${statusClass}`}>{status}</span>
+      <span class="beer-card__abv">{abv}% ABV</span>
+    </div>
+    <h3 class="beer-card__title">{title}</h3>
+    <p class="beer-card__style">{style}</p>
+    <p class="beer-card__desc">{shortDescription}</p>
+  </div>
+</a>
+
+<style>
+  .beer-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+    text-decoration: none;
+    color: var(--color-text);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .beer-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+  }
+
+  .beer-card__img {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--color-bg-alt);
+  }
+
+  .beer-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+  }
+
+  .beer-card:hover .beer-card__img img {
+    transform: scale(1.05);
+  }
+
+  .beer-card__placeholder {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-items: center;
+    font-size: 3rem;
+    opacity: 0.3;
+  }
+
+  .beer-card__body {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .beer-card__meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .beer-card__abv {
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+  }
+
+  .beer-card__title {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    color: var(--color-cream);
+  }
+
+  .beer-card__style {
+    font-size: 0.85rem;
+    color: var(--color-amber);
+    font-weight: 500;
+  }
+
+  .beer-card__desc {
+    font-size: 0.9rem;
+    color: var(--color-cream-dim);
+    line-height: 1.5;
+  }
+</style>
