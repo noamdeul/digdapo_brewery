@@ -10,8 +10,8 @@ shortDescription: "A lighter Belgian ale with maple added to bring extra ferment
 tastingNotes: "Expected to be light-bodied, gently fruity, and lightly sweet if the maple shows through."
 ingredients:
   - 250 g maple
-heroImage: "images/beers/belgian-blonde-batch-10-hero.jpg"
-logoImage: "images/beers/belgian-blonde-batch-10-label.png"
+heroImage: "images/beers/10-belgian-blonde/hero.svg"
+logoImage: "images/beers/10-belgian-blonde/label.svg"
 featured: false
 ---
 

@@ -8,8 +8,8 @@ ibu: 0
 status: "archived"
 shortDescription: "A high-gravity specialty batch under the Alice Juice name, brewed with a rich starting gravity."
 tastingNotes: "Expected to be full-bodied and intense, with a sweeter finish from the relatively high final gravity."
-heroImage: "images/beers/alice-juice-2-batch-11-hero.jpg"
-logoImage: "images/beers/alice-juice-2-batch-11-label.png"
+heroImage: "images/beers/11-alice-juice-2/hero.svg"
+logoImage: "images/beers/11-alice-juice-2/label.svg"
 featured: false
 ---
 

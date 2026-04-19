@@ -8,8 +8,8 @@ ibu: 0
 status: "archived"
 shortDescription: "A dark beer batch built around porter character, likely focusing on roast and smooth drinkability."
 tastingNotes: "Expected to show notes of chocolate, toast, and a soft roasted finish."
-heroImage: "images/beers/porter-batch-5-hero.jpg"
-logoImage: "images/beers/porter-batch-5-label.png"
+heroImage: "images/beers/05-porter/hero.svg"
+logoImage: "images/beers/05-porter/label.svg"
 featured: false
 ---
 

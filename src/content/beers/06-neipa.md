@@ -10,8 +10,8 @@ shortDescription: "A hazy IPA batch with mulberry concentrate added for a fruit-
 tastingNotes: "Likely juicy and soft, with fruit notes layered over a hazy IPA base."
 ingredients:
   - Mulberry concentrate
-heroImage: "images/beers/neipa-batch-6-hero.jpg"
-logoImage: "images/beers/neipa-batch-6-label.png"
+heroImage: "images/beers/06-neipa/hero.svg"
+logoImage: "images/beers/06-neipa/label.svg"
 featured: false
 ---
 

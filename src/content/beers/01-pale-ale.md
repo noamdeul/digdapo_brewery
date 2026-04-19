@@ -8,8 +8,8 @@ ibu: 0
 status: "archived"
 shortDescription: "A classic pale ale from the first recorded batch, brewed as a clean and approachable house beer."
 tastingNotes: "Likely balanced and easy-drinking, with a moderate malt backbone and a clean finish."
-heroImage: "images/beers/pale-ale-batch-1-hero.jpg"
-logoImage: "images/beers/pale-ale-batch-1-label.png"
+heroImage: "images/beers/01-pale-ale/hero.svg"
+logoImage: "images/beers/01-pale-ale/label.svg"
 featured: false
 ---
 

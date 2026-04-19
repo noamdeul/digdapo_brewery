@@ -8,8 +8,8 @@ ibu: 0
 status: "archived"
 shortDescription: "A strong Belgian-style ale with a high starting gravity and a classic triple direction."
 tastingNotes: "Expected to be expressive, fruity, and spicy with a dry finish."
-heroImage: "images/beers/belgian-triple-batch-2-hero.jpg"
-logoImage: "images/beers/belgian-triple-batch-2-label.png"
+heroImage: "images/beers/02-belgian-triple/hero.svg"
+logoImage: "images/beers/02-belgian-triple/label.svg"
 featured: false
 ---
 

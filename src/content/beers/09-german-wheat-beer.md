@@ -12,8 +12,8 @@ ingredients:
   - 30 g coarsely ground coriander seeds
   - Peels from 2 large oranges
   - Safale US-05 yeast
-heroImage: "images/beers/german-wheat-beer-batch-9-hero.jpg"
-logoImage: "images/beers/german-wheat-beer-batch-9-label.png"
+heroImage: "images/beers/09-german-wheat-beer/hero.svg"
+logoImage: "images/beers/09-german-wheat-beer/label.svg"
 featured: false
 ---
 

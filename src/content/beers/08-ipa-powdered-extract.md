@@ -13,8 +13,8 @@ ingredients:
   - צינוק hops - 30 g at 45 min
   - Cascade hops - 30 g at 15 min
   - Tettnang/Tanengger hops - 30 g at 5 min
-heroImage: "images/beers/ipa-powdered-extract-batch-8-hero.jpg"
-logoImage: "images/beers/ipa-powdered-extract-batch-8-label.png"
+heroImage: "images/beers/08-ipa-powdered-extract/hero.svg"
+logoImage: "images/beers/08-ipa-powdered-extract/label.svg"
 featured: false
 ---
 

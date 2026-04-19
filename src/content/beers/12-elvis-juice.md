@@ -9,8 +9,8 @@ status: "archived"
 shortDescription: "An Elvis Juice-inspired batch with Perle hops recorded in the brew notes."
 ingredients:
   - Perle hops - 15 g
-heroImage: "images/beers/elvis-juice-batch-12-hero.jpg"
-logoImage: "images/beers/elvis-juice-batch-12-label.png"
+heroImage: "images/beers/12-elvis-juice/hero.svg"
+logoImage: "images/beers/12-elvis-juice/label.svg"
 tastingNotes: "Not recorded yet."
 featured: false
 ---

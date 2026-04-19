@@ -8,8 +8,8 @@ ibu: 0
 status: "archived"
 shortDescription: "An American pale ale aimed at a drinkable balance between hops and malt."
 tastingNotes: "Likely crisp and refreshing, with moderate bitterness and a clean finish."
-heroImage: "images/beers/apa-batch-4-hero.jpg"
-logoImage: "images/beers/apa-batch-4-label.png"
+heroImage: "images/beers/04-apa/hero.svg"
+logoImage: "images/beers/04-apa/label.svg"
 featured: false
 ---
 

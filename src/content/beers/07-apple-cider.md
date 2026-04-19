@@ -10,8 +10,8 @@ shortDescription: "A dry apple cider batch that finished all the way down to 1.0
 tastingNotes: "Expected to be crisp, dry, and sharp, with a very clean finish."
 ingredients:
   - Saccharin
-heroImage: "images/beers/apple-cider-batch-7-hero.jpg"
-logoImage: "images/beers/apple-cider-batch-7-label.png"
+heroImage: "images/beers/07-apple-cider/hero.svg"
+logoImage: "images/beers/07-apple-cider/label.svg"
 featured: false
 ---
 

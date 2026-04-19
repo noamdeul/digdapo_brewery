@@ -8,8 +8,8 @@ ibu: 0
 status: "archived"
 shortDescription: "A bigger, stronger IPA brewed to push bitterness, gravity, and hop character upward."
 tastingNotes: "Expected to be bold and hop-forward, with firm bitterness and a dry finish."
-heroImage: "images/beers/double-ipa-batch-3-hero.jpg"
-logoImage: "images/beers/double-ipa-batch-3-label.png"
+heroImage: "images/beers/03-double-ipa/hero.svg"
+logoImage: "images/beers/03-double-ipa/label.svg"
 featured: false
 ---
 
