@@ -8,6 +8,16 @@ const allBeers = await getCollection("beers");
 const sorted = allBeers.sort(
   (a, b) => new Date(b.data.batchDate).getTime() - new Date(a.data.batchDate).getTime()
 );
+
+const statuses = [...new Set(sorted.map((b) => b.data.status))];
+const styles = [...new Set(sorted.map((b) => b.data.style))].sort();
+
+const statusCounts = Object.fromEntries(
+  statuses.map((s) => [s, sorted.filter((b) => b.data.status === s).length])
+);
+const styleCounts = Object.fromEntries(
+  styles.map((s) => [s, sorted.filter((b) => b.data.style === s).length])
+);
 ---
 
 <BaseLayout title="Our Beers">
@@ -17,26 +27,67 @@ const sorted = allBeers.sort(
         <h1>Our Beers</h1>
         <p>Every batch tells a story. Here's our lineup so far.</p>
       </div>
-      <div class="beer-grid">
+
+      <!-- Filters -->
+      <div class="filters" id="filters">
+        <div class="filter-group">
+          <span class="filter-label">Status</span>
+          <div class="filter-pills" data-filter="status">
+            <button class="filter-pill active" data-value="all">
+              All <span class="filter-pill__count">{sorted.length}</span>
+            </button>
+            {statuses.map((s) => (
+              <button class="filter-pill" data-value={s}>
+                {s} <span class="filter-pill__count">{statusCounts[s]}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+        <div class="filter-divider"></div>
+        <div class="filter-group">
+          <span class="filter-label">Style</span>
+          <div class="filter-pills" data-filter="style">
+            <button class="filter-pill active" data-value="all">
+              All <span class="filter-pill__count">{sorted.length}</span>
+            </button>
+            {styles.map((s) => (
+              <button class="filter-pill" data-value={s}>
+                {s} <span class="filter-pill__count">{styleCounts[s]}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-bar">
+        <p class="filter-count" id="filter-count"></p>
+        <button class="filter-clear hidden" id="filter-clear">Clear filters</button>
+      </div>
+
+      <div class="beer-grid" id="beer-grid">
         {sorted.map((beer) => (
-          <BeerCard
-            title={beer.data.title}
-            slug={beer.data.slug}
-            style={beer.data.style}
-            abv={beer.data.abv}
-            status={beer.data.status}
-            shortDescription={beer.data.shortDescription}
-            heroImage={beer.data.heroImage}
-          />
+          <div class="beer-grid__item" data-status={beer.data.status} data-style={beer.data.style}>
+            <BeerCard
+              title={beer.data.title}
+              slug={beer.data.slug}
+              style={beer.data.style}
+              abv={beer.data.abv}
+              status={beer.data.status}
+              shortDescription={beer.data.shortDescription}
+              heroImage={beer.data.heroImage}
+            />
+          </div>
         ))}
       </div>
+
+      <p class="no-results" id="no-results">No beers match the current filters.</p>
     </div>
   </section>
 </BaseLayout>
 
 <style>
   .page-header {
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
   }
 
   .page-header p {
@@ -44,4 +95,226 @@ const sorted = allBeers.sort(
     color: var(--color-cream-dim);
     font-size: 1.1rem;
   }
+
+  /* Filters */
+  .filters {
+    display: flex;
+    flex-direction: column;
+    gap: 1.1rem;
+    margin-bottom: 1rem;
+    padding: 1.25rem 1.5rem;
+    background: linear-gradient(135deg, var(--color-surface), var(--color-bg-alt));
+    border-radius: var(--radius);
+    border: 1px solid rgba(245, 230, 200, 0.06);
+  }
+
+  .filter-divider {
+    height: 1px;
+    background: rgba(245, 230, 200, 0.07);
+  }
+
+  .filter-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.85rem;
+  }
+
+  .filter-label {
+    flex-shrink: 0;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--color-text-muted);
+    padding-top: 0.5rem;
+    min-width: 52px;
+  }
+
+  .filter-pills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.45rem;
+  }
+
+  .filter-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.9rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+    border: 1px solid rgba(245, 230, 200, 0.1);
+    border-radius: 100px;
+    background: rgba(245, 230, 200, 0.04);
+    color: var(--color-cream-dim);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: var(--font-body);
+    text-transform: capitalize;
+    white-space: nowrap;
+  }
+
+  .filter-pill:hover {
+    border-color: rgba(212, 162, 78, 0.5);
+    color: var(--color-cream);
+    background: rgba(212, 162, 78, 0.1);
+    transform: translateY(-1px);
+  }
+
+  .filter-pill.active {
+    background: var(--color-amber);
+    color: var(--color-bg);
+    border-color: var(--color-amber);
+    box-shadow: 0 2px 12px rgba(212, 162, 78, 0.3);
+    font-weight: 600;
+  }
+
+  .filter-pill.active:hover {
+    background: var(--color-gold);
+    border-color: var(--color-gold);
+    transform: translateY(-1px);
+  }
+
+  .filter-pill__count {
+    font-size: 0.68rem;
+    font-weight: 700;
+    min-width: 1.1rem;
+    height: 1.1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100px;
+    background: rgba(245, 230, 200, 0.1);
+    color: var(--color-text-muted);
+    line-height: 1;
+  }
+
+  .filter-pill.active .filter-pill__count {
+    background: rgba(26, 26, 46, 0.25);
+    color: var(--color-bg);
+  }
+
+  /* Filter bar below */
+  .filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.25rem;
+  }
+
+  .filter-count {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  .filter-clear {
+    font-size: 0.8rem;
+    font-weight: 500;
+    font-family: var(--font-body);
+    color: var(--color-coral);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem 0;
+    transition: color 0.15s;
+  }
+
+  .filter-clear:hover {
+    color: var(--color-rust);
+  }
+
+  .filter-clear.hidden {
+    visibility: hidden;
+  }
+
+  /* Grid items */
+  .beer-grid__item {
+    display: block;
+  }
+
+  .beer-grid__item.hidden {
+    display: none;
+  }
+
+  .no-results {
+    display: none;
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--color-text-muted);
+    font-size: 1.05rem;
+  }
+
+  .no-results.visible {
+    display: block;
+  }
+
+  @media (max-width: 640px) {
+    .filters {
+      padding: 1rem;
+    }
+
+    .filter-group {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .filter-label {
+      padding-top: 0;
+    }
+  }
 </style>
+
+<script is:inline>
+  (function () {
+    var activeStatus = 'all';
+    var activeStyle = 'all';
+    var items = document.querySelectorAll('.beer-grid__item');
+    var countEl = document.getElementById('filter-count');
+    var noResults = document.getElementById('no-results');
+    var clearBtn = document.getElementById('filter-clear');
+
+    function applyFilters() {
+      var visible = 0;
+      items.forEach(function (item) {
+        var matchStatus = activeStatus === 'all' || item.getAttribute('data-status') === activeStatus;
+        var matchStyle = activeStyle === 'all' || item.getAttribute('data-style') === activeStyle;
+        if (matchStatus && matchStyle) {
+          item.classList.remove('hidden');
+          visible++;
+        } else {
+          item.classList.add('hidden');
+        }
+      });
+      countEl.textContent = 'Showing ' + visible + ' of ' + items.length + ' beers';
+      noResults.classList.toggle('visible', visible === 0);
+      clearBtn.classList.toggle('hidden', activeStatus === 'all' && activeStyle === 'all');
+    }
+
+    function resetGroup(group) {
+      group.querySelector('.filter-pill.active')?.classList.remove('active');
+      group.querySelector('[data-value="all"]').classList.add('active');
+    }
+
+    document.querySelectorAll('.filter-pills').forEach(function (group) {
+      var filterType = group.getAttribute('data-filter');
+      group.querySelectorAll('.filter-pill').forEach(function (pill) {
+        pill.addEventListener('click', function () {
+          group.querySelector('.filter-pill.active').classList.remove('active');
+          pill.classList.add('active');
+          if (filterType === 'status') activeStatus = pill.getAttribute('data-value');
+          if (filterType === 'style') activeStyle = pill.getAttribute('data-value');
+          applyFilters();
+        });
+      });
+    });
+
+    clearBtn.addEventListener('click', function () {
+      activeStatus = 'all';
+      activeStyle = 'all';
+      document.querySelectorAll('.filter-pills').forEach(resetGroup);
+      applyFilters();
+    });
+
+    applyFilters();
+  })();
+</script>
