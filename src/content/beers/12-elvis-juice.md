@@ -5,7 +5,7 @@ style: "IPA"
 batchDate: "2024-12-29"
 abv: 0.0
 ibu: 0
-status: "brewing"
+status: "archived"
 shortDescription: "An Elvis Juice-inspired batch with Perle hops recorded in the brew notes."
 ingredients:
   - Perle hops - 15 g

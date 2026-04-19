@@ -1,9 +1,9 @@
 ---
-title: "Tiny Batch Grapefruit Attack"
-slug: "tiny-batch-grapefruit-attack"
+title: "Tall Tale"
+slug: "tall-tale"
 style: "IPA"
-batchDate: "2026-03-01"
-abv: 0.0
+batchDate: "2025-10-01"
+abv: 6.4
 ibu: 0
 status: "on tap"
 shortDescription: "A tiny micro-batch IPA brewed with red grapefruit peel and juice. Only 10 bottles were made because the barley ran out before the ambition did."
@@ -13,8 +13,10 @@ ingredients:
   - Red grapefruit peel
   - Red grapefruit juice
   - Magnum hops
+  - Idaho 7 hops
+  - Wolf hops
   - Ale yeast
-logoImage: "images/beers/2026-03-tinybatch-grapefruit-attack/label.png"
+logoImage: "images/beers/2025-10-tall-tale/label.png"
 featured: false
 ---
 
