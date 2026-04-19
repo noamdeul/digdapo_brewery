@@ -17,6 +17,9 @@ ingredients:
   - Wolf hops
   - Ale yeast
 logoImage: "images/beers/2025-10-tall-tale/label.png"
+gallery:
+  - "images/beers/2025-10-tall-tale/image1.jpg"
+  - "images/beers/2025-10-tall-tale/image2.jpg"
 featured: false
 ---
 
