@@ -53,5 +53,17 @@ const base = import.meta.env.BASE_URL;
       const links = document.querySelector('.nav__links');
       toggle?.addEventListener('click', () => links?.classList.toggle('open'));
     </script>
+    <script is:inline>
+      document.querySelectorAll('img[data-fallback]').forEach(function (img) {
+        var fallback = img.getAttribute('data-fallback');
+        img.onerror = function () {
+          this.onerror = null;
+          this.src = fallback;
+        };
+        if (img.complete && img.naturalHeight === 0 && img.src !== fallback) {
+          img.src = fallback;
+        }
+      });
+    </script>
   </body>
 </html>

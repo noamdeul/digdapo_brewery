@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <rect width="800" height="500" fill="#22223a"/>
+  <!-- Beer glass silhouette -->
+  <g transform="translate(400, 220)" fill="none" stroke="#f5e6c8" stroke-width="2" opacity="0.18">
+    <!-- Glass body -->
+    <path d="M-40,80 L-30,-60 L30,-60 L40,80 Z" stroke-linejoin="round"/>
+    <!-- Glass base -->
+    <ellipse cx="0" cy="80" rx="40" ry="8"/>
+    <!-- Stem -->
+    <line x1="0" y1="80" x2="0" y2="100"/>
+    <!-- Foot -->
+    <ellipse cx="0" cy="100" rx="28" ry="6"/>
+    <!-- Foam -->
+    <path d="M-30,-60 Q-30,-80 -15,-75 Q0,-85 15,-75 Q30,-80 30,-60" stroke-linejoin="round"/>
+    <!-- Bubbles -->
+    <circle cx="-10" cy="20" r="4"/>
+    <circle cx="8" cy="40" r="3"/>
+    <circle cx="-5" cy="55" r="3.5"/>
+  </g>
+  <text x="400" y="330" text-anchor="middle" font-family="Georgia, serif" font-size="18" fill="#f5e6c8" opacity="0.2" letter-spacing="0.1em">PHOTO COMING SOON</text>
+</svg>
