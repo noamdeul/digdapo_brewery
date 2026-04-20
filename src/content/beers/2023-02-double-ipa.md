@@ -12,6 +12,7 @@ heroImage: "images/beers/2023-02-double-ipa/hero.svg"
 logoImage: "images/beers/2023-02-double-ipa/label.svg"
 gallery:
   - "images/beers/2023-02-double-ipa/image1.jpg"
+  - "images/beers/2023-02-double-ipa/image2.jpg"
 featured: false
 ---
 
