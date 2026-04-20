@@ -1,0 +1,244 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import "../styles/global.css";
+
+const base = import.meta.env.BASE_URL;
+const placeholder = `${base}images/brand/placeholder.svg`;
+
+const chapters = [
+  {
+    id: "kit",
+    eyebrow: "Chapter 1 · 2022",
+    title: "Starting at Home",
+    body: [
+      "Digdapo began on a kitchen counter with a basic extract brewing kit — a plastic fermenter, a boil pot, malt extract, and more enthusiasm than expertise.",
+      "Those first batches taught us the fundamentals: sanitation is sacred, patience pays off, and every bottle opened was a small celebration.",
+    ],
+    images: [
+      { src: `${base}images/process/kit-1.jpg`, caption: "First fermenter, first batch." },
+      { src: `${base}images/process/kit-2.jpg`, caption: "Extract brewing setup in the kitchen." },
+    ],
+  },
+  {
+    id: "all-grain",
+    eyebrow: "Chapter 2",
+    title: "Going All-Grain",
+    body: [
+      "Once the basics clicked, we graduated to all-grain brewing. Milling our own grain, mashing in a cooler, sparging with a kettle of hot water — suddenly every variable was ours to play with.",
+      "The recipes got bolder, the flavours cleaner, and the brew days longer. This was the chapter where hobby turned into craft.",
+    ],
+    images: [
+      { src: `${base}images/process/all-grain-1.jpg`, caption: "Mash tun and kettle setup." },
+      { src: `${base}images/process/all-grain-2.jpg`, caption: "Fresh-milled grain before the mash." },
+    ],
+  },
+  {
+    id: "brewzilla",
+    eyebrow: "Chapter 3 · Today",
+    title: "Brewzilla 4.1 Gen · 35L",
+    body: [
+      "Today our brew days run on a Brewzilla 4.1 Gen 35L — a single-vessel electric system with precise temperature control, a built-in pump, and room for the 20L batches we love to experiment with.",
+      "Recirculating mashes, step-temperature profiles, and repeatable results: the Brewzilla lets us focus on recipe design instead of wrestling with logistics.",
+    ],
+    images: [
+      { src: `${base}images/process/brewzilla-1.jpg`, caption: "Brewzilla 4.1 Gen 35L — our current workhorse." },
+      { src: `${base}images/process/brewzilla-2.jpg`, caption: "Recirculating mash in progress." },
+      { src: `${base}images/process/brewzilla-3.jpg`, caption: "Cooling and transfer to the fermenter." },
+    ],
+  },
+];
+---
+
+<BaseLayout title="Our Process">
+  <section class="section process-hero">
+    <div class="container">
+      <p class="process-hero__eyebrow">Our Process</p>
+      <h1>From Kitchen Counter to Brewzilla</h1>
+      <p class="process-hero__lede">
+        Every brewery has an origin story. Ours started with a beginner's kit
+        and a lot of curiosity — and it hasn't slowed down since.
+      </p>
+    </div>
+  </section>
+
+  {chapters.map((chapter, i) => (
+    <section class={`section chapter ${i % 2 === 1 ? "chapter--alt" : ""}`} id={chapter.id}>
+      <div class="container chapter__inner">
+        <div class="chapter__text">
+          <p class="chapter__eyebrow">{chapter.eyebrow}</p>
+          <h2>{chapter.title}</h2>
+          {chapter.body.map((p) => <p>{p}</p>)}
+        </div>
+        <div class={`chapter__gallery chapter__gallery--${chapter.images.length}`}>
+          {chapter.images.map((img) => (
+            <figure class="chapter__figure">
+              <img
+                src={img.src}
+                alt={img.caption}
+                data-fallback={placeholder}
+                loading="lazy"
+              />
+              <figcaption>{img.caption}</figcaption>
+            </figure>
+          ))}
+        </div>
+      </div>
+    </section>
+  ))}
+
+  <section class="section process-cta">
+    <div class="container process-cta__inner">
+      <h2>Taste the Journey</h2>
+      <p>Every batch on our shelf carries a piece of this history.</p>
+      <a href={`${base}beers/`} class="process-cta__btn">Browse Our Beers &rarr;</a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .process-hero {
+    background: linear-gradient(to bottom, var(--color-bg-alt), var(--color-bg));
+    padding-block: 4rem 3rem;
+    text-align: center;
+  }
+
+  .process-hero__eyebrow {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-amber);
+    margin-bottom: 0.75rem;
+  }
+
+  .process-hero h1 {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .process-hero__lede {
+    max-width: 640px;
+    margin: 1rem auto 0;
+    color: var(--color-cream-dim);
+    font-size: 1.15rem;
+    line-height: 1.6;
+  }
+
+  .chapter {
+    padding-block: 3.5rem;
+  }
+
+  .chapter--alt {
+    background: var(--color-bg-alt);
+  }
+
+  .chapter__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+  }
+
+  .chapter--alt .chapter__inner {
+    direction: rtl;
+  }
+
+  .chapter--alt .chapter__text,
+  .chapter--alt .chapter__gallery {
+    direction: ltr;
+  }
+
+  .chapter__eyebrow {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--color-coral);
+    margin-bottom: 0.5rem;
+  }
+
+  .chapter__text h2 {
+    margin-bottom: 1rem;
+  }
+
+  .chapter__text p {
+    color: var(--color-cream-dim);
+    margin-bottom: 1rem;
+  }
+
+  .chapter__gallery {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .chapter__gallery--2 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .chapter__gallery--3 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .chapter__gallery--3 .chapter__figure:first-child {
+    grid-column: 1 / -1;
+  }
+
+  .chapter__figure {
+    background: var(--color-surface);
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  }
+
+  .chapter__figure img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    background: var(--color-bg-alt);
+  }
+
+  .chapter__figure figcaption {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+    text-align: center;
+  }
+
+  .process-cta {
+    text-align: center;
+    padding-block: 4rem;
+  }
+
+  .process-cta__inner h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .process-cta__inner p {
+    color: var(--color-cream-dim);
+    margin-bottom: 1.5rem;
+  }
+
+  .process-cta__btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: var(--color-rust);
+    color: var(--color-cream);
+    font-weight: 600;
+    border-radius: var(--radius-sm);
+    transition: background 0.2s;
+  }
+
+  .process-cta__btn:hover {
+    background: var(--color-coral);
+    color: var(--color-cream);
+  }
+
+  @media (max-width: 768px) {
+    .chapter__inner,
+    .chapter--alt .chapter__inner {
+      grid-template-columns: 1fr;
+      direction: ltr;
+      gap: 2rem;
+    }
+  }
+</style>

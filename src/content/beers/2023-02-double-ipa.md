@@ -10,6 +10,8 @@ shortDescription: "A bigger, stronger IPA brewed to push bitterness, gravity, an
 tastingNotes: "Expected to be bold and hop-forward, with firm bitterness and a dry finish."
 heroImage: "images/beers/2023-02-double-ipa/hero.svg"
 logoImage: "images/beers/2023-02-double-ipa/label.svg"
+gallery:
+  - "images/beers/2023-02-double-ipa/image1.jpg"
 featured: false
 ---
 

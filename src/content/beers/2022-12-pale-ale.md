@@ -10,6 +10,19 @@ shortDescription: "A classic pale ale from the first recorded batch, brewed as a
 tastingNotes: "Likely balanced and easy-drinking, with a moderate malt backbone and a clean finish."
 heroImage: "images/beers/2022-12-pale-ale/hero.svg"
 logoImage: "images/beers/2022-12-pale-ale/label.svg"
+gallery:
+  - "images/beers/2022-12-pale-ale/image1.jpg"
+  - "images/beers/2022-12-pale-ale/image2.jpg"
+  - "images/beers/2022-12-pale-ale/image3.jpg"
+  - "images/beers/2022-12-pale-ale/image4.jpg"
+  - "images/beers/2022-12-pale-ale/image5.jpg"
+  - "images/beers/2022-12-pale-ale/image6.jpg"
+  - "images/beers/2022-12-pale-ale/image7.jpg"
+  - "images/beers/2022-12-pale-ale/image8.jpg"
+  - "images/beers/2022-12-pale-ale/image9.jpg"
+  - "images/beers/2022-12-pale-ale/image10.jpg"
+  - "images/beers/2022-12-pale-ale/image10.jpg"
+  - "images/beers/2022-12-pale-ale/image11.jpg"
 featured: false
 ---
 

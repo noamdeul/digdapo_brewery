@@ -9,7 +9,12 @@ status: "archived"
 shortDescription: "A strong Belgian-style ale with a high starting gravity and a classic triple direction."
 tastingNotes: "Expected to be expressive, fruity, and spicy with a dry finish."
 heroImage: "images/beers/2023-01-belgian-triple/hero.svg"
-logoImage: "images/beers/2023-01-belgian-triple/label.svg"
+logoImage: "images/beers/2023-01-belgian-triple/label.jpg"
+gallery:
+  - "images/beers/2023-01-belgian-triple/image1.jpg"
+  - "images/beers/2023-01-belgian-triple/image2.jpg"
+  - "images/beers/2023-01-belgian-triple/image3.jpg"
+  - "images/beers/2023-01-belgian-triple/image4.jpg"
 featured: false
 ---
 
