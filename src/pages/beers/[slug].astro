@@ -31,6 +31,7 @@ const statusClass =
       <img
         src={d.heroImage ? `${base}${d.heroImage}` : `${base}images/brand/placeholder.svg`}
         alt={d.title}
+        data-lightbox
         data-fallback={`${base}images/brand/placeholder.svg`}
       />
     </div>
@@ -104,7 +105,7 @@ const statusClass =
           <h3>Gallery</h3>
           <div class="gallery-grid">
             {d.gallery.map((img) => (
-              <img src={`${base}${img}`} alt={`${d.title} photo`} data-fallback={`${base}images/brand/placeholder.svg`} />
+              <img src={`${base}${img}`} alt={`${d.title} photo`} data-lightbox data-fallback={`${base}images/brand/placeholder.svg`} />
             ))}
           </div>
         </div>
@@ -117,7 +118,9 @@ const statusClass =
   <!-- Lightbox modal -->
   <div class="lightbox" id="lightbox" aria-hidden="true">
     <button class="lightbox__close" aria-label="Close">&times;</button>
+    <button class="lightbox__prev" aria-label="Previous">&lsaquo;</button>
     <img class="lightbox__img" id="lightbox-img" alt="" />
+    <button class="lightbox__next" aria-label="Next">&rsaquo;</button>
   </div>
 </BaseLayout>
 
@@ -274,6 +277,17 @@ const statusClass =
     border-radius: var(--radius-sm);
     aspect-ratio: 4 / 3;
     object-fit: cover;
+    cursor: zoom-in;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .gallery-grid img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  }
+
+  .beer-detail__hero img {
+    cursor: zoom-in;
   }
 
   .beer-detail__back {
@@ -329,6 +343,36 @@ const statusClass =
     opacity: 1;
   }
 
+  .lightbox__prev,
+  .lightbox__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--color-cream);
+    font-size: 3rem;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s;
+    padding: 1rem;
+    line-height: 1;
+    z-index: 1;
+  }
+
+  .lightbox__prev { left: 1rem; }
+  .lightbox__next { right: 1rem; }
+
+  .lightbox__prev:hover,
+  .lightbox__next:hover {
+    opacity: 1;
+  }
+
+  .lightbox__prev.hidden,
+  .lightbox__next.hidden {
+    display: none;
+  }
+
   @media (max-width: 640px) {
     .beer-detail__stats {
       flex-wrap: wrap;
@@ -343,32 +387,61 @@ const statusClass =
 </style>
 
 <script>
-  const lightbox = document.getElementById('lightbox');
+  const lightbox = document.getElementById('lightbox')!;
   const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement;
+  const prevBtn = lightbox.querySelector('.lightbox__prev') as HTMLButtonElement;
+  const nextBtn = lightbox.querySelector('.lightbox__next') as HTMLButtonElement;
 
-  function openLightbox(src: string, alt: string) {
-    lightboxImg.src = src;
-    lightboxImg.alt = alt;
-    lightbox?.classList.add('open');
-    lightbox?.setAttribute('aria-hidden', 'false');
+  const images = Array.from(document.querySelectorAll<HTMLImageElement>('[data-lightbox]'));
+  let currentIndex = 0;
+
+  function updateNav() {
+    prevBtn.classList.toggle('hidden', currentIndex <= 0);
+    nextBtn.classList.toggle('hidden', currentIndex >= images.length - 1);
+  }
+
+  function showImage(index: number) {
+    currentIndex = index;
+    lightboxImg.src = images[index].src;
+    lightboxImg.alt = images[index].alt;
+    updateNav();
+  }
+
+  function openLightbox(index: number) {
+    showImage(index);
+    lightbox.classList.add('open');
+    lightbox.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
   }
 
   function closeLightbox() {
-    lightbox?.classList.remove('open');
-    lightbox?.setAttribute('aria-hidden', 'true');
+    lightbox.classList.remove('open');
+    lightbox.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
   }
 
-  document.querySelectorAll<HTMLImageElement>('[data-lightbox]').forEach((img) => {
-    img.addEventListener('click', () => openLightbox(img.src, img.alt));
+  images.forEach((img, i) => {
+    img.addEventListener('click', () => openLightbox(i));
   });
 
-  lightbox?.addEventListener('click', (e) => {
-    if (e.target !== lightboxImg) closeLightbox();
+  prevBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (currentIndex > 0) showImage(currentIndex - 1);
+  });
+
+  nextBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    if (currentIndex < images.length - 1) showImage(currentIndex + 1);
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target !== lightboxImg && e.target !== prevBtn && e.target !== nextBtn) closeLightbox();
   });
 
   document.addEventListener('keydown', (e) => {
+    if (!lightbox.classList.contains('open')) return;
     if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft' && currentIndex > 0) showImage(currentIndex - 1);
+    if (e.key === 'ArrowRight' && currentIndex < images.length - 1) showImage(currentIndex + 1);
   });
 </script>
