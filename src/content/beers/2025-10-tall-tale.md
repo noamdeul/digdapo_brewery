@@ -1,21 +1,15 @@
 ---
 title: "Tall Tale"
 slug: "tall-tale"
-style: "IPA"
+style: "Double Neipa"
 batchDate: "2025-10-01"
 abv: 6.4
 ibu: 0
 status: "on tap"
-shortDescription: "A tiny micro-batch IPA brewed with red grapefruit peel and juice. Only 10 bottles were made because the barley ran out before the ambition did."
-tastingNotes: "Bright grapefruit aroma, citrus-forward bitterness, light malt backbone, crisp mouthfeel, and a dry finish."
+shortDescription: ""
+tastingNotes: ""
 ingredients:
   - Barley malt
-  - Red grapefruit peel
-  - Red grapefruit juice
-  - Magnum hops
-  - Idaho 7 hops
-  - Wolf hops
-  - Ale yeast
 logoImage: "images/beers/2025-10-tall-tale/label.png"
 gallery:
   - "images/beers/2025-10-tall-tale/image1.jpg"
@@ -25,14 +19,50 @@ featured: false
 
 ## The Story
 
-This beer was born from a happy limitation. There was only a very small amount of barley available, so instead of forcing a full batch, the brew turned into a tiny experimental IPA with red grapefruit peel and juice.
-
-Only 10 bottles were made, which gave it the feeling of a one-time release rather than a regular brew. Small in volume, loud in personality.
-
 ## Brew Notes
 
-Micro-batch brewed in March 2026.
 
-Built around Magnum hops and red grapefruit additions for a punchy citrus character. Because the batch was so small, every bottle felt like a limited edition test run worth remembering.
+קיט בישול בירה – דאבל NEIPA (20 ליטר)
+תיאור קצר:
+בירה בסגנון New England IPA חזקה ועשירה במיוחד – גוף מלא, מעוננת, פיצוץ כשות פירותי
+רכיבי לתת:
+6 ק"ג לתת פייל אייל (Pale Ale Malt)
 
-ABV and IBU were not recorded and can be updated later if needed.
+300 גרם לתת דקסטרין (Dextrin Malt)
+
+800 גרם לתת חיטה (Wheat Malt)
+
+400 גרם שיבולת שועל (Flaked Oats)
+
+רכיבי כשות:
+15 גרם כשות מגנום (Magnum) – להוספה בתחילת הבישול (60 דקות)
+
+90 גרם כשות אידהו 7 (Idaho 7) – דריי הופ (Dry Hop), 3 ימים לפני הביקבוק
+
+90 גרם כשות נאגט (Nugget) – דריי הופ (Dry Hop), 3 ימים לפני הביקבוק
+
+שמרים:
+ורדנט – Verdant ipa
+
+הוראות בישול:
+מאש (Mash):
+28 ליטר מים בטמפרטורה של 66°C למשך 60 דקות
+
+ספארג' (Sparge):
+שטיפה ב-3 ליטר מים חמים (כ-75°C)
+
+בישול (Boil):
+זמן בישול כולל – 60 דקות
+תוספות כשות לפי הזמנים המפורטים
+
+תסיסה (Fermentation):
+תסיסה ב-18°C למשך 14 ימים
+
+ערכים צפויים:
+
+ערך נתון
+אלכוהול בנפח (ABV) 7.5%
+צפיפות התחלתית (OG) 1.075
+צפיפות סופית (FG) 1.018
+צבע (EBC) 12 (ענברי חיוור)
+מרירות (IBU) 12 (מרירות עדינה, מאוזנת לארומות הפירותיות)
