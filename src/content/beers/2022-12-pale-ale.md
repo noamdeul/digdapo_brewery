@@ -4,10 +4,20 @@ slug: "pale-ale-batch-1"
 style: "Pale Ale"
 batchDate: "2022-12-24"
 abv: 5.25
-ibu: 0
 status: "archived"
 shortDescription: "A classic pale ale from the first recorded batch, brewed as a clean and approachable house beer."
 tastingNotes: "Likely balanced and easy-drinking, with a moderate malt backbone and a clean finish."
+ingredients:
+  - 3 kg Liquid Superlight malt extract
+  - 250 g Vienna malt
+  - 250 g Wheat malt
+  - 250 g Crystal 10 malt
+  - 250 g Carapils malt
+  - 30 g Perle hops at 45 min
+  - 30 g Centennial hops at 5 min
+  - Red grapefruit zest at 3 min
+  - Fermentis US-05 yeast, 11.5 g
+  - 150 g Dextrose
 heroImage: "images/beers/2022-12-pale-ale/hero.svg"
 logoImage: "images/beers/2022-12-pale-ale/label.svg"
 gallery:
@@ -21,7 +31,6 @@ gallery:
   - "images/beers/2022-12-pale-ale/image8.jpg"
   - "images/beers/2022-12-pale-ale/image9.jpg"
   - "images/beers/2022-12-pale-ale/image10.jpg"
-  - "images/beers/2022-12-pale-ale/image10.jpg"
   - "images/beers/2022-12-pale-ale/image11.jpg"
 featured: false
 ---
@@ -33,17 +42,3 @@ Pale Ale was brewed as batch #1. This page captures the recorded details from th
 ## Brew Notes
 
 Batch #1. OG: 1.055. FG: 1.015. Bottled on 2023-01-02.
-
-Liquid Superlight malt extract: 3 kg
-Vienna malt: 250 g
-Wheat malt: 250 g
-Crystal 10 malt: 250 g
-Carapils malt: 250 g
-
-Perle hops: 30 g, 45 min - whole boil
-Centennial hops: 30 g, 5 min before end of boil
-
-Yeast: Fermentis US-05, 11.5 g
-Dextrose: 150 g
-
-Red grapefruit zest: added 3 min before end of boil

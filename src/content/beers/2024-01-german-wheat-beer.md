@@ -4,7 +4,6 @@ slug: "german-wheat-beer-batch-9"
 style: "German Wheat Beer"
 batchDate: "2024-01-06"
 abv: 6.04
-ibu: 0
 status: "archived"
 shortDescription: "A German-style wheat beer with orange peel and coarsely ground coriander added late in the boil."
 tastingNotes: "Expected to be bright and aromatic, with citrus and spice over a soft wheat base."

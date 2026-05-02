@@ -5,7 +5,6 @@ style: "Hazy IPA"
 batchDate: "2026-04-17"
 status: "brewing"
 shortDescription: "A juicy, soft Hazy IPA brewed with red grapefruit peel and fresh red grapefruit juice, layered with bright hop aroma and a smooth grainy body."
-# tastingNotes: "Bright grapefruit zest and citrus on the nose, backed by juicy hop aroma. Soft and rounded mouthfeel from wheat and oats, with notes of tropical fruit, red grapefruit, light bitterness, and a smooth finish."
 ingredients:
   - 6 kg Pale Ale Malt
   - 300 g Dextrin Malt
@@ -19,8 +18,6 @@ ingredients:
   - Red grapefruit peel
   - Fresh red grapefruit juice
   - LalBrew Windsor yeast
-
-
 heroImage: "images/beers/2026-04-red-grapefruit-hazy-ipa/hero.png"
 logoImage: "images/beers/2026-04-red-grapefruit-hazy-ipa/label.png"
 gallery:

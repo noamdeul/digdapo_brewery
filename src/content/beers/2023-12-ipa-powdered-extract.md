@@ -4,7 +4,6 @@ slug: "ipa-powdered-extract-batch-8"
 style: "IPA"
 batchDate: "2023-12-09"
 abv: 5.64
-ibu: 0
 status: "archived"
 shortDescription: "An IPA built from powdered extract, layered with grapefruit peel and a multi-hop boil schedule."
 tastingNotes: "Likely citrus-forward with a zesty grapefruit edge and classic IPA bitterness."

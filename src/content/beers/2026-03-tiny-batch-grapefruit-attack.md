@@ -3,8 +3,6 @@ title: "Tiny Batch Grapefruit Attack"
 slug: "tiny-batch-grapefruit-attack"
 style: "IPA"
 batchDate: "2026-03-01"
-abv: 0.0
-ibu: 0
 status: "on tap"
 shortDescription: "A tiny micro-batch IPA brewed with red grapefruit peel and juice. Only 10 bottles were made because the barley ran out before the ambition did."
 tastingNotes: "Bright grapefruit aroma, citrus-forward bitterness, light malt backbone, crisp mouthfeel, and a dry finish."
@@ -14,7 +12,7 @@ ingredients:
   - Red grapefruit juice
   - Magnum hops
   - Ale yeast
-logoImage: "images/beers/2026-03-tinybatch-grapefruit-attack/label.png"
+logoImage: "images/beers/2026-03-tiny-batch-grapefruit-attack/label.png"
 featured: false
 ---
 

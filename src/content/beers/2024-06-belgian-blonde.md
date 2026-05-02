@@ -3,8 +3,6 @@ title: "Belgian Blonde"
 slug: "belgian-blonde-batch-10"
 style: "Belgian Blonde"
 batchDate: "2024-06-26"
-abv: 0.0
-ibu: 0
 status: "archived"
 shortDescription: "A lighter Belgian ale with maple added to bring extra fermentables and flavor."
 tastingNotes: "Expected to be light-bodied, gently fruity, and lightly sweet if the maple shows through."
