@@ -38,47 +38,48 @@ featured: false
 
 OG: 1.060. FG: 1.010. Bottled on 2025-06-20.
 
-קיט בישול בירה – דאבל NEIPA (20 ליטר)
-תיאור קצר:
-בירה בסגנון New England IPA חזקה ועשירה במיוחד – גוף מלא, מעוננת, פיצוץ כשות פירותי
-רכיבי לתת:
-6 ק"ג לתת פייל אייל (Pale Ale Malt)
+Beer brewing kit — Double NEIPA (20 liters)
+Short description:
+An especially strong and rich New England IPA — full body, hazy, fruity hop explosion.
 
-300 גרם לתת דקסטרין (Dextrin Malt)
+Malt ingredients:
+6 kg Pale Ale Malt
 
-800 גרם לתת חיטה (Wheat Malt)
+300 g Dextrin Malt
 
-400 גרם שיבולת שועל (Flaked Oats)
+800 g Wheat Malt
 
-רכיבי כשות:
-15 גרם כשות מגנום (Magnum) – להוספה בתחילת הבישול (60 דקות)
+400 g Flaked Oats
 
-90 גרם כשות אידהו 7 (El Dorado) – דריי הופ (Dry Hop), 3 ימים לפני הביקבוק
+Hop ingredients:
+15 g Magnum hops — added at the start of the boil (60 minutes)
 
-90 גרם כשות נאגט (Mosaic) – דריי הופ (Dry Hop), 3 ימים לפני הביקבוק
+90 g El Dorado hops — dry hop, 3 days before bottling
 
-שמרים:
-ורדנט – Verdant ipa
+90 g Mosaic hops — dry hop, 3 days before bottling
 
-הוראות בישול:
-מאש (Mash):
-28 ליטר מים בטמפרטורה של 66°C למשך 60 דקות
+Yeast:
+Verdant — Verdant IPA
 
-ספארג' (Sparge):
-שטיפה ב-3 ליטר מים חמים (כ-75°C)
+Brewing instructions:
+Mash:
+28 liters of water at 66°C for 60 minutes
 
-בישול (Boil):
-זמן בישול כולל – 60 דקות
-תוספות כשות לפי הזמנים המפורטים
+Sparge:
+Rinse with 3 liters of hot water (~75°C)
 
-תסיסה (Fermentation):
-תסיסה ב-18°C למשך 14 ימים
+Boil:
+Total boil time — 60 minutes
+Hop additions per the schedule above
 
-ערכים צפויים:
+Fermentation:
+Ferment at 18°C for 14 days
 
-ערך נתון
-אלכוהול בנפח (ABV) 7.5%
-צפיפות התחלתית (OG) 1.075
-צפיפות סופית (FG) 1.018
-צבע (EBC) 12 (ענברי חיוור)
-מרירות (IBU) 12 (מרירות עדינה, מאוזנת לארומות הפירותיות)
+Expected specs:
+
+Value
+ABV: 7.5%
+Original gravity (OG): 1.075
+Final gravity (FG): 1.018
+Color (EBC): 12 (pale amber)
+Bitterness (IBU): 12 (gentle bitterness, balanced against the fruity aromas)

@@ -23,4 +23,4 @@ Elvis Juice was brewed as batch #12. This page captures the recorded details fro
 
 ## Brew Notes
 
-Batch #12. Brewed on 2024-12-29. Addition noted: פרלה 15 גרם. OG, FG, bottling date, and ABV were not recorded in the table.
+Batch #12. Brewed on 2024-12-29. Addition noted: 15 g Perle. OG, FG, bottling date, and ABV were not recorded in the table.

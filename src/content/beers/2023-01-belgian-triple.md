@@ -28,45 +28,45 @@ Batch #2. OG: 1.083. Bottled on 2023-01-25. FG and ABV were not recorded in the 
 
 
 
-סגנון הבירה:
-הטריפל הבלגי הוא סגנון בירה חזק, מתוק ומורכב, עם אחוז אלכוהול גבוה יחסית. מדובר בבירה בהירה שמציעה טעמים עשירים ומורכבים הודות לשימוש בשמרים מיוחדים ובתהליך תסיסה ארוך. הטריפל בלגי מצטיין במרירות מאוזנת לצד מתיקות קלה, והוא בעל גוף מלא, אך קל יחסית בטעמו, מה שהופך אותו לאידיאלי למי שמחפש בירה חזקת אלכוהול אך עם איזון טעמים מדויק.
+Beer style:
+The Belgian Triple is a strong, sweet, and complex beer style with a relatively high alcohol content. It is a pale beer that offers rich and complex flavors thanks to the use of special yeasts and a long fermentation process. The Belgian Triple shines with balanced bitterness alongside light sweetness, and has a full body that is still relatively light in taste, making it ideal for those looking for a high-alcohol beer with precise flavor balance.
 
-חומרי גלם עבור 20 ליטר:
+Ingredients for 20 liters:
 
-רכז לתת בהיר
+Light malt extract
 
-גרעינים:
+Grains:
 
-חיטה: 300 גרם
+Wheat: 300 g
 
-דקסטרין: 300 גרם
+Dextrin: 300 g
 
-ויינה: 400 גרם
+Vienna: 400 g
 
-כשות וזמני כשות:
+Hops and hop schedule:
 
-מגנום: 15 גרם – הוסף ל-60 דקות בישול (לתוספת מרירות).
+Magnum: 15 g — added at 60 minutes of boil (for bitterness).
 
-ווילאמט: 30 גרם – הוסף לדקה האחרונה של הבישול (לתוספת ארומה).
+Willamette: 30 g — added at the last minute of the boil (for aroma).
 
-שמרים:
+Yeast:
 
-ABBAYE – שמרי טריפל בלגי המובילים, שמביאים את הטעמים הייחודיים של בירות הטריפל הבלגיות.
+ABBAYE — leading Belgian Triple yeast, bringing the unique flavors of Belgian Triple beers.
 
-טמפרטורת תסיסה מומלצת:
+Recommended fermentation temperature:
 
-17-23 מעלות צלזיוס במשך 14-21 יום
+17–23°C for 14–21 days
 
-מינון גיזוז מומלץ:
+Recommended priming dosage:
 
-7 גרם סוכר ענבים לליטר או 6.3 גרם סוכר לבן לליטר
+7 g dextrose per liter or 6.3 g white sugar per liter
 
-ערכים:
+Specs:
 
-אחוז אלכוהול צפוי: 8%
+Expected ABV: 8%
 
-צפיפות (OG-FG): 1075 – 1012
+Gravity (OG–FG): 1.075 – 1.012
 
-EBC (גוון): 13
+EBC (color): 13
 
-IBU (מרירות): 27
+IBU (bitterness): 27

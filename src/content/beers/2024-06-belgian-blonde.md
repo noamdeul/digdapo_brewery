@@ -21,4 +21,4 @@ Belgian Blonde was brewed as batch #10. This page captures the recorded details 
 
 ## Brew Notes
 
-Batch #10. OG: 1.042. FG: 1.010. Bottling date and ABV were not recorded in the table. Addition: מייפל 250 גרם.
+Batch #10. OG: 1.042. FG: 1.010. Bottling date and ABV were not recorded in the table. Addition: 250 g maple.

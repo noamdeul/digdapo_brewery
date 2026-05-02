@@ -34,16 +34,16 @@ Pale Ale was brewed as batch #1. This page captures the recorded details from th
 
 Batch #1. OG: 1.055. FG: 1.015. Bottled on 2023-01-02.
 
-רכז לתת נוזלי סופרלייט 3 ק״ג
-לתת וינה 250 גרם
-לתת חיטה 250 גרם
-לתת קריסטל 10 250 גרם
-לתת קרפילס 250 גרם
+Liquid Superlight malt extract: 3 kg
+Vienna malt: 250 g
+Wheat malt: 250 g
+Crystal 10 malt: 250 g
+Carapils malt: 250 g
 
-כשות פרל 30 גרם 45 דקות - כל הרתיחה
-כשות סנטניאל 30 גרם 5 דקות לסוף הרתיחה
+Perle hops: 30 g, 45 min - whole boil
+Centennial hops: 30 g, 5 min before end of boil
 
-שמרים פרמנטיס 11.5 גרם us-05
-דקסטרוז 150 גרם
+Yeast: Fermentis US-05, 11.5 g
+Dextrose: 150 g
 
-גרחדה מאשכולית אדומה 3 דקות לסוף הרתיחה
+Red grapefruit zest: added 3 min before end of boil

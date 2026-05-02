@@ -21,4 +21,4 @@ Apple Cider was brewed as batch #7. This page captures the recorded details from
 
 ## Brew Notes
 
-Batch #7. OG: 1.055. FG: 1.000. Bottled on 2023-07-10. Addition: סכרין. ABV was not recorded in the table.
+Batch #7. OG: 1.055. FG: 1.000. Bottled on 2023-07-10. Addition: saccharin. ABV was not recorded in the table.

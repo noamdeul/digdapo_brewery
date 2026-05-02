@@ -25,32 +25,34 @@ Double IPA was brewed as batch #3. This page captures the recorded details from 
 Batch #3. OG: 1.073. FG: 1.015. Bottled on 2023-02-20.
 
 
-ה-דאבל IPA הוא גרסה חזקה ומרוכזת של ה-IPA הקלאסי, עם אחוז אלכוהול גבוה שמגיע לכ-8%. מדובר בבירה עם גוף מלא ומרירות בולטת, אך מאוזנת היטב, כך שהמרירות לא "מכסה" את הטעמים אלא משתלבת בצורה הרמונית עם המתיקות של המלט. הדאבל IPA מציע חווית שתייה עוצמתית עם טעמים פירותיים וארומות עשירות
-חומרי גלם עבור 20 ליטר:
-רכז לתת פילסנר
-לתת פייל אייל: 600 גרם
-לתת חיטה: 200 גרם
-לתת דקסטרין: 200 גרם
+The Double IPA is a stronger, more concentrated version of the classic IPA, with a high alcohol content reaching about 8%. It is a beer with a full body and prominent bitterness, but well balanced — so the bitterness does not "cover" the flavors but rather integrates harmoniously with the malt sweetness. The Double IPA offers a powerful drinking experience with fruity flavors and rich aromas.
 
-כשות ותזמון:
+Ingredients for 20 liters:
+Pilsner malt extract
+Pale Ale malt: 600 g
+Wheat malt: 200 g
+Dextrin malt: 200 g
 
-מרינקה 30 גרם – הוסף ב-60 דקות בישול (לתוספת מרירות)
+Hops and schedule:
 
-נאגט: 90 גרם – הוסף ב-2 דקות האחרונות של הבישול (לתוספת ארומה פירותית)
+Marynka: 30 g — added at 60 minutes of boil (for bitterness)
 
-שמרים:
-BRY97 –
-טמפרטורת תסיסה מומלצת:
-17-23 מעלות צלזיוס
+Nugget: 90 g — added in the last 2 minutes of the boil (for fruity aroma)
 
-מינון גיזוז מומלץ:
-7 גרם סוכר ענבים לליטר או
+Yeast:
+BRY97
 
-6.3 גרם סוכר לבן לליטר
+Recommended fermentation temperature:
+17–23°C
 
-ערכים:
-אחוז אלכוהול צפוי: 8%
+Recommended priming dosage:
+7 g dextrose per liter or
 
-EBC (גוון): 8
+6.3 g white sugar per liter
 
-IBU (מרירות): 70
+Specs:
+Expected ABV: 8%
+
+EBC (color): 8
+
+IBU (bitterness): 70

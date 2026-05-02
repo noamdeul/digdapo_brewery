@@ -32,55 +32,55 @@ featured: false
 ## Brew Notes
 
 
-קיט בישול בירה – אמריקן IPA (20 ליטר)
-תיאור קצר:
-אחת הגרסאות הפופולריות ביותר של IPA – בירה חזקה, מרירה, אדמונית, צלולה ופצצה פירותית, עם שילוב זני הכשות אל דוראדו ו-Simcoe.
+Beer brewing kit — American IPA (20 liters)
+Short description:
+One of the most popular versions of IPA — a strong, bitter, reddish, clear beer with a fruity bomb of flavor, combining the El Dorado and Simcoe hop varieties.
 
-רכיבי לתת:
-6 ק"ג לתת פייל אייל (Pale Ale Malt)
+Malt ingredients:
+6 kg Pale Ale Malt
 
-400 גרם לתת וינה (Vienna Malt)
+400 g Vienna Malt
 
-600 גרם לתת מינכן (Munich Malt)
+600 g Munich Malt
 
-150 גרם לתת קריסטל 240 (Crystal 240 Malt)
+150 g Crystal 240 Malt
 
-200 גרם לתת דקסטרין (Dextrin Malt)
+200 g Dextrin Malt
 
-רכיבי כשות:
-15 גרם כשות מגנום (Magnum) – להוספה בתחילת הבישול (60 דקות)
+Hop ingredients:
+15 g Magnum hops — added at the start of the boil (60 minutes)
 
-30 גרם כשות אל דוראדו (El Dorado) – להוספה 5 דקות לפני סיום הבישול
+30 g El Dorado hops — added 5 minutes before the end of the boil
 
-30 גרם כשות Simcoe – להוספה בדקה האחרונה של הבישול
+30 g Simcoe hops — added in the last minute of the boil
 
-30 גרם כשות אל דוראדו (El Dorado) – דריי הופ (Dry Hop), 3 ימים לפני הביקבוק
+30 g El Dorado hops — dry hop, 3 days before bottling
 
-30 גרם כשות Simcoe – דריי הופ (Dry Hop), 3 ימים לפני הביקבוק
+30 g Simcoe hops — dry hop, 3 days before bottling
 
-שמרים:
-חבילת שמרי Verdant
+Yeast:
+One pack of Verdant yeast
 
-הוראות בישול:
-מאש (Mash):
-26 ליטר מים בטמפרטורה של 66°C למשך 60 דקות
+Brewing instructions:
+Mash:
+26 liters of water at 66°C for 60 minutes
 
-ספארג' (Sparge):
-שטיפה ב-3 ליטר מים חמים (כ-75°C)
+Sparge:
+Rinse with 3 liters of hot water (~75°C)
 
-בישול (Boil):
-זמן בישול כולל – 60 דקות
-תוספות כשות לפי הזמנים המפורטים
+Boil:
+Total boil time — 60 minutes
+Hop additions per the schedule above
 
-תסיסה (Fermentation):
-תסיסה ב-18°C למשך 14 ימים
-לאחר מכן 72 שעות קולד קראש (Cold Crash) בטמפרטורה נמוכה
+Fermentation:
+Ferment at 18°C for 14 days
+Followed by 72 hours of cold crash at low temperature
 
-ערכים צפויים:
+Expected specs:
 
-ערך נתון
-אלכוהול בנפח (ABV) 8%
-צפיפות התחלתית (OG) 1.080
-צפיפות סופית (FG) 1.020
-צבע (EBC) 18 (אדמדם-ענברי)
-מרירות (IBU) 28 (מרירות ברורה אך מאוזנת)
+Value
+ABV: 8%
+Original gravity (OG): 1.080
+Final gravity (FG): 1.020
+Color (EBC): 18 (reddish-amber)
+Bitterness (IBU): 28 (clear but balanced bitterness)

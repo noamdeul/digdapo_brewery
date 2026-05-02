@@ -23,4 +23,4 @@ Wheat Beer German was brewed as batch #9. This page captures the recorded detail
 
 ## Brew Notes
 
-Batch #9. OG: 1.056. FG: 1.010. Bottled on 2024-01-21. Late-boil additions: 30 g זרעי כוסברה טחונים גס מאוד and peels from 2 large oranges in the last 15 minutes. Yeast: safale us-05.
+Batch #9. OG: 1.056. FG: 1.010. Bottled on 2024-01-21. Late-boil additions: 30 g very coarsely ground coriander seeds and peels from 2 large oranges in the last 15 minutes. Yeast: Safale US-05.
