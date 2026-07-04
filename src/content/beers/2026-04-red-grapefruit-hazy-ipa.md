@@ -1,10 +1,11 @@
 ---
-title: "Red Grapefruit Hazy IPA"
+title: "Giraffe Haze: Red Grapefruit IPA"
 slug: "red-grapefruit-hazy-ipa"
-style: "Hazy IPA"
+style: "Red Grapefruit Hazy IPA"
 batchDate: "2026-04-17"
-status: "brewing"
-shortDescription: "A juicy, soft Hazy IPA brewed with red grapefruit peel and fresh red grapefruit juice, layered with bright hop aroma and a smooth grainy body."
+abv: 5
+status: "on tap"
+shortDescription: "A juicy, hazy IPA packed with bold hop aroma and bright red grapefruit character. Soft, citrusy, and slightly wild, with the kind of handcrafted attitude you'd expect from a giraffe running a brewhouse."
 ingredients:
   - 6 kg Pale Ale Malt
   - 300 g Dextrin Malt
@@ -19,7 +20,7 @@ ingredients:
   - Fresh red grapefruit juice
   - LalBrew Windsor yeast
 heroImage: "images/beers/2026-04-red-grapefruit-hazy-ipa/hero.png"
-logoImage: "images/beers/2026-04-red-grapefruit-hazy-ipa/label.png"
+logoImage: "images/beers/2026-04-red-grapefruit-hazy-ipa/label1.png"
 gallery:
   - "images/beers/2026-04-red-grapefruit-hazy-ipa/photo1.jpg"
 featured: false
