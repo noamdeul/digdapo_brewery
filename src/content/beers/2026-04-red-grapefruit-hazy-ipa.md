@@ -4,7 +4,7 @@ slug: "red-grapefruit-hazy-ipa"
 style: "Red Grapefruit Hazy IPA"
 batchDate: "2026-04-17"
 abv: 5
-status: "brewing"
+status: "on tap"
 shortDescription: "A juicy, hazy IPA packed with bold hop aroma and bright red grapefruit character. Soft, citrusy, and slightly wild, with the kind of handcrafted attitude you'd expect from a giraffe running a brewhouse."
 ingredients:
   - 6 kg Pale Ale Malt
