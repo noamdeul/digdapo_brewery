@@ -18,6 +18,7 @@ logoImage: "images/beers/beer-name-label.png"          # optional — label art 
 gallery:                                               # optional — remove block if no gallery yet
   - "images/beers/beer-name-photo1.jpg"
   - "images/beers/beer-name-photo2.jpg"
+untappdUrl: "https://untp.beer/XXXXX"                  # optional — Untappd share link, remove if none
 featured: false                                        # true to show on the home page
 ---
 

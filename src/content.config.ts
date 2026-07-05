@@ -21,6 +21,7 @@ const beers = defineCollection({
     heroImage: z.string().optional(),
     logoImage: z.string().optional(),
     gallery: z.array(z.string()).optional(),
+    untappdUrl: z.string().url().optional(),
     featured: z.boolean().default(false),
   }),
 });

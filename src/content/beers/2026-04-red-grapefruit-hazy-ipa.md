@@ -23,6 +23,7 @@ heroImage: "images/beers/2026-04-red-grapefruit-hazy-ipa/hero.png"
 logoImage: "images/beers/2026-04-red-grapefruit-hazy-ipa/label1.png"
 gallery:
   - "images/beers/2026-04-red-grapefruit-hazy-ipa/photo1.jpg"
+untappdUrl: "https://untp.beer/p6YGz"
 featured: false
 ---
 
