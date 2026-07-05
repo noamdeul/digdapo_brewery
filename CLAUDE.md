@@ -25,7 +25,7 @@ No linter, formatter, or test suite is configured.
 
 ## Content Model
 
-Beer frontmatter fields: `title`, `slug`, `style`, `batchDate`, `status` (brewing | on tap | conditioning | archived), `shortDescription`, `abv?`, `ibu?`, `tastingNotes?`, `ingredients?`, `heroImage?`, `logoImage?`, `gallery?`, `featured?`. Template at `beer_templates/BEER_TEMPLATE.md`.
+Beer frontmatter fields: `title`, `slug`, `style`, `batchDate`, `status` (brewing | on tap | conditioning | archived), `shortDescription`, `abv?`, `ibu?`, `tastingNotes?`, `ingredients?`, `heroImage?`, `logoImage?`, `gallery?`, `untappdUrl?`, `featured?`. Template at `beer_templates/BEER_TEMPLATE.md`.
 
 ## Key Conventions
 
